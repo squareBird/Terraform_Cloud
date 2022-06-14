@@ -11,14 +11,14 @@ terraform {
 provider "openstack" {
   user_name   = "cloudmsp@wins21.co.kr"
   tenant_id   = "649bbc87313648de8d55b9ed50ca4b3e"
-  password    = "sp123$here"
+  password    = "$(password)"
   auth_url    = "https://api-identity.infrastructure.cloud.toast.com/v2.0"
   region      = "KR1"
 }
 
-resource "openstack_blockstorage_volume_v2" "volume_1" {
+resource "openstack_blockstorage_volume_v2" "volume_2" {
   region      = "KR1"
-  name        = "volume_1"
+  name        = "volume_2"
   description = "first test volume"
   size        = 20
 }
