@@ -20,5 +20,5 @@ resource "openstack_blockstorage_volume_v2" "volume_1" {
   region      = "KR1"
   name        = "volume_1"
   description = "first test volume"
-  size        = 3
+  size        = 20
 }
