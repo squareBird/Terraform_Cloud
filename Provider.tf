@@ -16,9 +16,9 @@ provider "openstack" {
   region      = "KR1"
 }
 
-resource "openstack_blockstorage_volume_v2" "volume_2" {
+resource "openstack_blockstorage_volume_v2" "volume_3" {
   region      = "KR1"
-  name        = "volume_2"
+  name        = "volume_3"
   description = "first test volume"
   size        = 20
 }
