@@ -15,3 +15,10 @@ provider "openstack" {
   auth_url    = "https://api-identity.infrastructure.cloud.toast.com/v2.0"
   region      = "KR1"
 }
+
+resource "openstack_blockstorage_volume_v2" "volume_1" {
+  region      = "KR1"
+  name        = "volume_1"
+  description = "first test volume"
+  size        = 3
+}
