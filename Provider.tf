@@ -16,7 +16,23 @@ provider "openstack" {
   region      = "KR1"
 }
 
+resource "openstack_compute_instance_v2" "instance" {
+  name = "test"
+}
+
+resource "openstack_blockstorage_volume_attach_v2" "attach_instance_volume" {
+  instance_id = "087e8cdb-f998-4709-8610-b28cd3c3b07a"
+  volume_id = openstack_blockstorage_volume_v2.volume_3.id
+}
+
 resource "openstack_blockstorage_volume_v2" "volume_3" {
+  region      = "KR1"
+  name        = "volume_3"
+  description = "first test volume"
+  size        = 50
+}
+
+resource "openstack_blockstorage_volume_v2" "volume_4" {
   region      = "KR1"
   name        = "volume_3"
   description = "first test volume"
