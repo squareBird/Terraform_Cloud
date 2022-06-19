@@ -8,6 +8,7 @@ terraform {
   }
 }
 
+# 변수는 Terrform-Cloud 에서 별도로 관리
 provider "openstack" {
   user_name   = "cloudmsp@wins21.co.kr"
   password = var.nhn_passwd
