@@ -10,7 +10,7 @@ resource "openstack_compute_instance_v2" "web_server"{
   network {
     name = data.openstack_networking_network_v2.Test_Network.name
     uuid = data.openstack_networking_network_v2.Test_Network.id
-    # IP를 강제로 할당하여 서브넷 지정
+    # IP를 강제로 할당하여 서브넷 지정 ㅎ
     fixed_ip_v4 = "10.0.1.5"
   }
 
